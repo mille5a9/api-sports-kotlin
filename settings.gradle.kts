@@ -16,4 +16,5 @@ include(
     "api-sports-core",
     "api-nba-kotlin",
     "api-nfl-kotlin",
+    "samples",
 )
