@@ -2,20 +2,11 @@ plugins {
     `kotlin-dsl`
 }
 
-apply("../gradle/loadProps.gradle")
-val kotlinVersion: String by project
-val dokkaVersion: String by project
-val kspVersion: String by project
-
-repositories {
-    mavenCentral()
-}
-
 dependencies {
-
-    implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion")
-    implementation("org.jetbrains.kotlin:kotlin-serialization:$kotlinVersion")
-    implementation("org.jetbrains.dokka:dokka-gradle-plugin:$dokkaVersion")
-
-    runtimeOnly("com.google.devtools.ksp:com.google.devtools.ksp.gradle.plugin:$kspVersion")
+    implementation(libs.kotlin.gradle.plugin)
+    implementation(libs.kotlin.serialization.gradle.plugin)
+    implementation(libs.ksp.gradle.plugin)
+    implementation(libs.dokka.gradle.plugin)
+    implementation(libs.maven.publish.gradle.plugin)
+    implementation(libs.ktlint.gradle.plugin)
 }

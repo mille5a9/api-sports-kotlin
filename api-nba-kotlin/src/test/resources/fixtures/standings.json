@@ -1,0 +1,54 @@
+{
+  "get": "standings/",
+  "parameters": {
+    "league": "standard",
+    "season": "2021",
+    "team": "1"
+  },
+  "errors": [],
+  "results": 1,
+  "response": [
+    {
+      "league": "standard",
+      "season": 2021,
+      "team": {
+        "id": 1,
+        "name": "Atlanta Hawks",
+        "nickname": "Hawks",
+        "code": "ATL",
+        "logo": "https://upload.wikimedia.org/wikipedia/fr/e/ee/Hawks_2016.png"
+      },
+      "conference": {
+        "name": "east",
+        "rank": 8,
+        "win": 26,
+        "loss": 26
+      },
+      "division": {
+        "name": "southeast",
+        "rank": 2,
+        "win": 9,
+        "loss": 7,
+        "gamesBehind": "10.0"
+      },
+      "win": {
+        "home": 27,
+        "away": 16,
+        "total": 43,
+        "percentage": ".524",
+        "lastTen": 7
+      },
+      "loss": {
+        "home": 14,
+        "away": 25,
+        "total": 39,
+        "percentage": ".476",
+        "lastTen": 3
+      },
+      "gamesBehind": "10.0",
+      "streak": 1,
+      "winStreak": true,
+      "tieBreakerPoints": null
+    }
+  ]
+}

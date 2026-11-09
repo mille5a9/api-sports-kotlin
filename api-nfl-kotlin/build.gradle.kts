@@ -1,16 +1,11 @@
 plugins {
-    id("api-sports.conventions")
+    id("api-sports.kotlin-library")
     id("api-sports.publishing")
-}
-
-repositories {
-    mavenCentral()
+    id("com.google.devtools.ksp")
 }
 
 dependencies {
-    implementation(project(":common"))
+    api(project(":api-sports-core"))
+    api(libs.autodsl.annotations)
+    ksp(libs.autodsl.processor)
 }
-
-ext.set("pomName", "api-nfl-kotlin")
-ext.set("pomDesc", "Unofficial wrapper for the API-SPORTS NFL API")
-ext.set("pomUrl", "https://github.com/mille5a9/api-sports-kotlin")

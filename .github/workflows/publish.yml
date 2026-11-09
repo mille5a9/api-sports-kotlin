@@ -1,0 +1,38 @@
+name: Publish to Maven Central
+
+# Runs when a GitHub release is published. The release tag must match VERSION_NAME in gradle.properties.
+# Required repository secrets (Settings -> Secrets and variables -> Actions):
+#   MAVEN_CENTRAL_USERNAME / MAVEN_CENTRAL_PASSWORD  - a user token from https://central.sonatype.com/account
+#   SIGNING_KEY                                      - ASCII-armored private GPG key (gpg --armor --export-secret-keys <id>)
+#   SIGNING_KEY_PASSWORD                             - its passphrase
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: 17
+      - uses: gradle/actions/setup-gradle@v6
+      - name: Check tag matches version
+        run: |
+          version=$(grep '^VERSION_NAME=' gradle.properties | cut -d= -f2)
+          tag="${GITHUB_REF_NAME#v}"
+          if [ "$version" != "$tag" ]; then
+            echo "Release tag $GITHUB_REF_NAME does not match VERSION_NAME=$version" >&2
+            exit 1
+          fi
+      - run: ./gradlew build publishAndReleaseToMavenCentral --no-configuration-cache
+        env:
+          ORG_GRADLE_PROJECT_mavenCentralUsername: ${{ secrets.MAVEN_CENTRAL_USERNAME }}
+          ORG_GRADLE_PROJECT_mavenCentralPassword: ${{ secrets.MAVEN_CENTRAL_PASSWORD }}
+          ORG_GRADLE_PROJECT_signingInMemoryKey: ${{ secrets.SIGNING_KEY }}
+          ORG_GRADLE_PROJECT_signingInMemoryKeyPassword: ${{ secrets.SIGNING_KEY_PASSWORD }}
