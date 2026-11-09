@@ -15,4 +15,5 @@ rootProject.name = "api-sports-kotlin"
 include(
     "api-sports-core",
     "api-nba-kotlin",
+    "api-nfl-kotlin",
 )

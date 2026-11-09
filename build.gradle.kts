@@ -6,6 +6,7 @@ plugins {
 dependencies {
     dokka(project(":api-sports-core"))
     dokka(project(":api-nba-kotlin"))
+    dokka(project(":api-nfl-kotlin"))
 }
 
 dokka {
