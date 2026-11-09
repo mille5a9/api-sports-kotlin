@@ -1,0 +1,41 @@
+{
+  "get": "players/",
+  "parameters": {
+    "id": "553"
+  },
+  "errors": [],
+  "results": 1,
+  "response": [
+    {
+      "id": 553,
+      "firstname": "Lou",
+      "lastname": "Williams",
+      "birth": {
+        "date": "1986-10-27",
+        "country": "USA"
+      },
+      "nba": {
+        "start": 2005,
+        "pro": 16
+      },
+      "height": {
+        "feets": "6",
+        "inches": "2",
+        "meters": "1.88"
+      },
+      "weight": {
+        "pounds": "175",
+        "kilograms": "79.4"
+      },
+      "college": "South Gwinnett HS (GA)",
+      "affiliation": "South Gwinnett HS (GA)/USA",
+      "leagues": {
+        "standard": {
+          "jersey": 6,
+          "active": true,
+          "pos": "G"
+        }
+      }
+    }
+  ]
+}

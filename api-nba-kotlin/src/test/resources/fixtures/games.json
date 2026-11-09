@@ -1,0 +1,94 @@
+{
+  "get": "games/",
+  "parameters": {
+    "id": "10404"
+  },
+  "errors": [],
+  "results": 1,
+  "response": [
+    {
+      "id": 10404,
+      "league": "standard",
+      "season": 2021,
+      "date": {
+        "start": "2022-02-12T00:00:00.000Z",
+        "end": "2022-02-12T02:27:00.000Z",
+        "duration": "2:17"
+      },
+      "stage": 2,
+      "status": {
+        "clock": null,
+        "halftime": false,
+        "short": 3,
+        "long": "Finished"
+      },
+      "periods": {
+        "current": 4,
+        "total": 4,
+        "endOfPeriod": false
+      },
+      "arena": {
+        "name": "Gainbridge Fieldhouse",
+        "city": "Indianapolis",
+        "state": "IN",
+        "country": "USA"
+      },
+      "teams": {
+        "visitors": {
+          "id": 7,
+          "name": "Cleveland Cavaliers",
+          "nickname": "Cavaliers",
+          "code": "CLE",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/0/06/Cavs_de_Cleveland_logo_2017.png/150px-Cavs_de_Cleveland_logo_2017.png"
+        },
+        "home": {
+          "id": 15,
+          "name": "Indiana Pacers",
+          "nickname": "Pacers",
+          "code": "IND",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/c/cf/Pacers_de_l%27Indiana_logo.svg/1180px-Pacers_de_l%27Indiana_logo.svg.png"
+        }
+      },
+      "scores": {
+        "visitors": {
+          "win": 35,
+          "loss": 21,
+          "series": {
+            "win": 3,
+            "loss": 0
+          },
+          "linescore": [
+            "28",
+            "35",
+            "25",
+            "32"
+          ],
+          "points": 120
+        },
+        "home": {
+          "win": 19,
+          "loss": 38,
+          "series": {
+            "win": 0,
+            "loss": 3
+          },
+          "linescore": [
+            "47",
+            "27",
+            "22",
+            "17"
+          ],
+          "points": 113
+        }
+      },
+      "officials": [
+        "Ben Taylor",
+        "Dedric Taylor",
+        "Suyash Mehta"
+      ],
+      "timesTied": 2,
+      "leadChanges": 7,
+      "nugget": null
+    }
+  ]
+}
